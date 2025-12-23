@@ -1,4 +1,5 @@
 import socket
+import time
 
 
 #----------------------CONFIG----------------
@@ -21,10 +22,16 @@ def scan_port(target_ip,port):
 def scan_range(target_ip,start_port,end_port):
     print(f"Scanning {target_ip} from port {start_port} to {end_port}")
 
+    start_time=time.time()
+
     for port in range(start_port,end_port+1):
         if scan_port(target_ip,port):
             print(f"[OPEN] Port {port}")
 
+    end_time=time.time()
+    duration=end_time-start_time
+
+    print(f"\nScan completed in {duration:.2f} seconds")
 
 if __name__ == "__main__":
     scan_range(target_ip,start_port,end_port)

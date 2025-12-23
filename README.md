@@ -26,6 +26,8 @@ Scanning 127.0.0.1 from port 20 to 1024
 [OPEN] Port 135
 [OPEN] Port 445
 
+Scan completed in X.XX seconds
+
 ## What I Learned
 - How TCP port scanning works using socket connections
 - Difference between open, closed, and filtered ports
