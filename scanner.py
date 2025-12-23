@@ -1,8 +1,16 @@
 import socket
 
+
+#----------------------CONFIG----------------
+target_ip="127.0.0.1"
+start_port=20
+end_port=1024
+timeout=0.5
+#--------------------------------------------
+
 def scan_port(target_ip,port):
     s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-    s.settimeout(0.5)
+    s.settimeout(timeout)
 
     result=s.connect_ex((target_ip,port))
     s.close()
@@ -19,8 +27,4 @@ def scan_range(target_ip,start_port,end_port):
 
 
 if __name__ == "__main__":
-    target_ip="127.0.0.1"
-    start_port=20
-    end_port=1024
-
     scan_range(target_ip,start_port,end_port)
