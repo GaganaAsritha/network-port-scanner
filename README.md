@@ -19,3 +19,21 @@ and identifies open ports using TCP connect scanning.
 ## Usage
 ```bash
 python scanner.py
+
+## Sample Output
+Scanning 127.0.0.1 from port 20 to 1024
+
+[OPEN] Port 135
+[OPEN] Port 445
+
+## What I Learned
+- How TCP port scanning works using socket connections
+- Difference between open, closed, and filtered ports
+- How timeouts affect network scanning speed
+- Structuring a Python project using functions
+
+## Future Improvements
+- Multithreaded scanning for better performance
+- Service detection based on common ports
+- Command-line arguments for target and port range
+
